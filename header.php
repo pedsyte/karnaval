@@ -15,7 +15,7 @@
       <a href="#" class="logo">
         <img src="img/logo.png" alt="Логотип Пиццерии" width="200">
       </a>
-      <a href="#" class="delivery-link">Условия доставки</a>
+      <a href="delivery.php" class="delivery-link">Условия доставки</a>
     </div>
     <div class="header-right">
       <div class="contacts">
