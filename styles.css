@@ -256,6 +256,16 @@ margin-bottom: 0px;}
 .product button:hover {
   background: #cd7070;
 }
+.delivery-content {
+  background-color: rgba(254, 229, 58, 0.40);
+  padding: 20px;
+  border-radius: 10px;
+  color: #fee53a;
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
 footer {
   background: #333;
   color: white;
