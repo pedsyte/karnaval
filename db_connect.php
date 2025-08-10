@@ -26,5 +26,3 @@ function getDbConnection(): PDO
     $path = __DIR__ . '/db/database.sqlite';
     return new PDO('sqlite:' . $path, null, null, $options);
 }
-
-
