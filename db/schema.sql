@@ -13,20 +13,24 @@ CREATE TABLE products (
     category_id INT NOT NULL,
     name VARCHAR(255) NOT NULL,
     price DECIMAL(10,2) NOT NULL,
+
     description TEXT,
     FOREIGN KEY (category_id) REFERENCES categories(id)
 );
 
 CREATE TABLE product_options (
+
     id INT AUTO_INCREMENT PRIMARY KEY,
     product_id INT NOT NULL,
     option_name VARCHAR(255) NOT NULL,
     option_value VARCHAR(255) NOT NULL,
+
     FOREIGN KEY (product_id) REFERENCES products(id)
 );
 
 -- Sample data
 INSERT INTO categories (name) VALUES ('Electronics'), ('Books');
+
 
 INSERT INTO products (category_id, name, price, description) VALUES
  (1, 'Smartphone', 699.99, 'Latest model smartphone'),

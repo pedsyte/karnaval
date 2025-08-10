@@ -11,7 +11,7 @@ try {
             $pdo->exec($statement);
         }
     }
-    echo "Database initialized successfully." . PHP_EOL;
+echo "Database initialized successfully." . PHP_EOL;
 } catch (PDOException $e) {
     fwrite(STDERR, "Database initialization failed: " . $e->getMessage() . PHP_EOL);
     exit(1);
