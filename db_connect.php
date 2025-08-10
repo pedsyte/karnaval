@@ -15,9 +15,9 @@ function getDbConnection(): PDO
 
     if ($dbType === 'mysql') {
         $host = getenv('DB_HOST') ?: 'localhost';
-        $dbname = getenv('DB_NAME') ?: 'karnaval';
-        $user = getenv('DB_USER') ?: 'root';
-        $pass = getenv('DB_PASS') ?: '';
+        $dbname = getenv('DB_NAME') ?: 'gornichf_karnaval';
+        $user = getenv('DB_USER') ?: 'gornichf_carnaval_user';
+        $pass = getenv('DB_PASS') ?: 'Vjybnjh1991';
         $dsn = "mysql:host={$host};dbname={$dbname};charset=utf8mb4";
         return new PDO($dsn, $user, $pass, $options);
     }
