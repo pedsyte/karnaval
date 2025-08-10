@@ -2,11 +2,14 @@
 require_once __DIR__ . '/db_connect.php';
 
 /**
+
  * Retrieve categories with their products and components.
+
  */
 function fetchCategories(): array
 {
     $pdo = getDbConnection();
+
 
     $categories = $pdo->query('SELECT id, name, image_path FROM categories')->fetchAll();
 
@@ -46,3 +49,4 @@ foreach ($categories as $cat) {
 if (!$ajax) {
     echo '</main>';
 }
+
