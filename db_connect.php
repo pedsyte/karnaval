@@ -5,7 +5,9 @@
  */
 function getDbConnection(): PDO
 {
-    $dbType = getenv('DB_TYPE') ?: 'sqlite';
+
+    $dbType = getenv('DB_TYPE') ?: 'mysql';
+
 
     $options = [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,

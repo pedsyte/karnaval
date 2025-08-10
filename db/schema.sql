@@ -4,30 +4,33 @@ DROP TABLE IF EXISTS products;
 DROP TABLE IF EXISTS categories;
 
 CREATE TABLE categories (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    name TEXT NOT NULL
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE products (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    category_id INTEGER NOT NULL,
-    name TEXT NOT NULL,
-    price REAL NOT NULL,
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    category_id INT NOT NULL,
+    name VARCHAR(255) NOT NULL,
+    price DECIMAL(10,2) NOT NULL,
+
     description TEXT,
     FOREIGN KEY (category_id) REFERENCES categories(id)
 );
 
 CREATE TABLE product_options (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    product_id INTEGER NOT NULL,
-    option_name TEXT NOT NULL,
-    option_value TEXT NOT NULL,
+
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    product_id INT NOT NULL,
+    option_name VARCHAR(255) NOT NULL,
+    option_value VARCHAR(255) NOT NULL,
+
     FOREIGN KEY (product_id) REFERENCES products(id)
 );
 
 -- Sample data
-INSERT INTO categories (name) VALUES ('Electronics');
-INSERT INTO categories (name) VALUES ('Books');
+INSERT INTO categories (name) VALUES ('Electronics'), ('Books');
+
 
 INSERT INTO products (category_id, name, price, description) VALUES
  (1, 'Smartphone', 699.99, 'Latest model smartphone'),
